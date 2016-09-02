@@ -82,9 +82,17 @@ function civicrm_api3_email2_each_Sendemails($params) {
   						
   		//	CRM_Core_Error::debug("Group id: ", $tmp_grp_id); 
   			// get all contacts in the group.
-  			$result = civicrm_api3('GroupContact', 'get', array(
+  			/*
+  			 * GroupContact does not deal with smart groups or nested groups/
+  			 $result = civicrm_api3('GroupContact', 'get', array(
   					'sequential' => 1,
   					'group_id' => $tmp_grp_id,
+  			));
+  			*/
+  			$result = civicrm_api('contact', 'get', array(
+  					'version' => 3,
+  					'group' => array($tmp_grp_id => 1),
+  					'options' => array('limit' => 0),
   			));
   			
   			// loop through each, and send 1 email per contact. 
