@@ -11,8 +11,8 @@ return array (
     'params' => 
     array (
       'version' => 3,
-      'name' => 'Call PDFbundle.Sendpdf API',
-      'description' => 'Call PDFbundle.Sendpdf API',
+      'name' => 'Create 1 bundled PDF for entire group, email to staff/volunteer contact',
+      'description' => 'Sends a single large PDF to the contact specified, who will presumably print and mail it via snail mail.',
       'run_frequency' => 'Daily',
       'api_entity' => 'PDFbundle',
       'api_action' => 'Sendpdf',

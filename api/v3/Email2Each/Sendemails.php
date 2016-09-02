@@ -47,7 +47,7 @@ function civicrm_api3_email2_each_Sendemails($params) {
   					'is_active' => 1,
   			));
   			
-  			CRM_Core_Error::debug("Extension API call: ", $result);
+  			// CRM_Core_Error::debug("Extension API call: ", $result);
   			
   			if( $result['count'] <> 1){
   				throw new API_Exception(/*errorMessage*/ "Missing required extension, extension key= '".$email_ext_key."' Get this extension at:  ".$email_ext_url, /*errorCode*/ 1234);

@@ -9,7 +9,10 @@
  * @see http://wiki.civicrm.org/confluence/display/CRM/API+Architecture+Standards
  */
 function _civicrm_api3_p_d_fbundle_Sendpdf_spec(&$spec) {
-  $spec['magicword']['api.required'] = 1;
+	$spec['group']['api.required'] = 1;
+	$spec['message_template']['api.required'] = 1;
+	$spec['staff_contact']['api.required'] = 1;
+	
 }
 
 /**
