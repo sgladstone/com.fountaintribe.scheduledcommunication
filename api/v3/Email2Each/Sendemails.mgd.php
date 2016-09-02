@@ -12,7 +12,7 @@ return array (
     array (
       'version' => 3,
       'name' => 'Call Email2Each.Sendemails API',
-      'description' => 'Call Email2Each.Sendemails API',
+      'description' => 'Sends an email to each contact in the group',
       'run_frequency' => 'Daily',
       'api_entity' => 'Email2Each',
       'api_action' => 'Sendemails',
