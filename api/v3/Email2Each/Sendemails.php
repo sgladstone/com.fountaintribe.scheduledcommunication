@@ -148,10 +148,10 @@ function civicrm_api3_email2_each_Sendemails($params) {
   		$tmp_emails_send_to_str = implode(",",  $emails_sent_to);
   		
   		$tmp_send_failures_str = implode( ",", $emails_send_failure);
-  		CRM_Core_Error::debug( "Contacts with a send failure: ", $emails_send_failure);
+  	//	CRM_Core_Error::debug( "Contacts with a send failure: ", $emails_send_failure);
   		
     $returnValues = array( // OK, return several data rows
-      $email_result => array('id' => 'email_result', 'name' => $emails_sent),
+      $email_result => array('id' => 'email_sent_count', 'name' => $emails_sent),
     		34 => array( 'id' => 'contacts_missing_emails', 'name' => $tmp_without_email_str  ),
     		35 => array('id' => 'contacts_sending_failure', 'name' => $tmp_send_failures_str ),
     		36 =>  array( 'id' => 'emails_sent_to', 'name' => $tmp_emails_send_to_str  ),
